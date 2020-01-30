@@ -52,6 +52,25 @@ document.querySelector("#answer4").innerHTML = titleWood
 let eightMore = items.filter(function(mat) {
   return mat.materials.length >= 8
 })
-console.log(eightMore)
+let finalEight = eightMore
+  .map(function(item3) {
+    return (
+      item3.title +
+      item3.materials.length +
+      "\n\n" +
+      item3.materials.join("\n") +
+      "\n\n"
+    )
+  })
+  .join("")
+console.log(finalEight)
+document.querySelector("#answer5").innerHTML = finalEight
 
 //Q6 arr.reduce()
+
+let iMade = items.filter(function(me) {
+  return me.who_made === "i_did"
+})
+var finalMade = iMade.length + " were made by their sellers"
+console.log(finalMade)
+document.querySelector("#answer6").innerHTML = finalMade
