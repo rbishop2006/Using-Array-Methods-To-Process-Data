@@ -1,4 +1,6 @@
-//Q1  arr.reduce()
+//  Q1  arr.reduce()
+//  answer is one item from the array
+//  once avg is obtained, need toFixed(2) for correct decimal
 
 let avgPrice = items.reduce(function(item1, item2) {
   return item1 + item2.price
@@ -10,7 +12,10 @@ var finalPrice = "The average price is $" + avgPrice
 
 document.querySelector("#answer1").innerHTML = finalPrice
 
-//Q2 arr.filter()
+//  Q2 arr.filter()
+//  answer is a smaller array of
+//  use map() to change new array
+//  add line breaks
 
 let costs = items.filter(function(x) {
   return x.price > 14.0 && x.price < 18.0
@@ -23,7 +28,10 @@ let final = costs
 console.log(final)
 document.querySelector("#answer2").innerHTML = final
 
-//Q3 arr.filter()
+//  Q3 arr.filter()
+//  return smaller array
+//  use map to change array
+//  add strings
 
 let pounds = items.filter(function(a) {
   return a.currency_code === "GBP"
@@ -35,7 +43,10 @@ console.log(gPounds)
 
 document.querySelector("#answer3").innerHTML = gPounds
 
-//Q4 arr.filter()
+//  Q4 arr.filter()
+//  return a small array
+// return use map() to change array
+//  add strings
 
 let wood = items.filter(function(w) {
   return w.materials.includes("wood")
@@ -49,7 +60,10 @@ console.log(titleWood)
 
 document.querySelector("#answer4").innerHTML = titleWood
 
-//Q5 arr.filter()
+//  Q5 arr.filter()
+//  return a small array
+// return use map() to change array
+//  add strings
 
 let eightMore = items.filter(function(mat) {
   return mat.materials.length >= 8
@@ -70,7 +84,10 @@ let finalEight = eightMore
 console.log(finalEight)
 document.querySelector("#answer5").innerHTML = finalEight
 
-//Q6 arr.filter()
+//  Q6 arr.filter()
+//  return a small array
+//  return use map() to change array
+//  add strings
 
 let iMade = items.filter(function(me) {
   return me.who_made === "i_did"
