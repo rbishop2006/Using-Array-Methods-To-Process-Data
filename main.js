@@ -6,7 +6,9 @@ let avgPrice = items.reduce(function(item1, item2) {
 avgPrice = (avgPrice / items.length).toFixed(2)
 console.log(avgPrice)
 
-document.querySelector("#answer1").innerHTML = avgPrice
+var finalPrice = "The average price is $" + avgPrice
+
+document.querySelector("#answer1").innerHTML = finalPrice
 
 //Q2 arr.filter()
 
@@ -15,7 +17,7 @@ let costs = items.filter(function(x) {
 })
 let final = costs
   .map(function(item) {
-    return item.title + "\n"
+    return item.title + "\n" + "\n"
   })
   .join("")
 console.log(final)
@@ -40,7 +42,7 @@ let wood = items.filter(function(w) {
 })
 let titleWood = wood
   .map(function(z) {
-    return z.title + "\n"
+    return z.title + " is made of wood." + "\n" + "\n"
   })
   .join("")
 console.log(titleWood)
@@ -56,7 +58,9 @@ let finalEight = eightMore
   .map(function(item3) {
     return (
       item3.title +
+      " has " +
       item3.materials.length +
+      " materials:" +
       "\n\n" +
       item3.materials.join("\n") +
       "\n\n"
@@ -66,7 +70,7 @@ let finalEight = eightMore
 console.log(finalEight)
 document.querySelector("#answer5").innerHTML = finalEight
 
-//Q6 arr.reduce()
+//Q6 arr.filter()
 
 let iMade = items.filter(function(me) {
   return me.who_made === "i_did"
